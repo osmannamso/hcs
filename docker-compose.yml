@@ -6,12 +6,13 @@ services:
     environment:
       POSTGRES_PASSWORD: root
       POSTGRES_USER: root
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
     ports:
       - '5433:5432'
   web:
-    build:
-      context: .
-      dockerfile: DockerFile
+    build: .
+    command: python /code/manage.py migrate --no-input
     command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
@@ -21,3 +22,5 @@ services:
       - SECRET_KEY=changemeinprod
     depends_on:
       - db
+volumes:
+  postgres_data:
