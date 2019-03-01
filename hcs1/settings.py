@@ -92,9 +92,9 @@ WSGI_APPLICATION = 'hcs1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hcs',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'NAME': 'postgres',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'HOST': 'db',
         'PORT': '5432'
     }
