@@ -11,7 +11,9 @@ services:
     ports:
       - '5433:5432'
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: DockerFile
     command: python /code/manage.py migrate --no-input
     command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
