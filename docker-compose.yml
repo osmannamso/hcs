@@ -6,8 +6,6 @@ services:
     environment:
       POSTGRES_PASSWORD: root
       POSTGRES_USER: root
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
     ports:
       - '5433:5432'
   web:
