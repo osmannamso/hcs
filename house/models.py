@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Street(models.Model):
     class Meta:
         verbose_name_plural = 'Улицы'

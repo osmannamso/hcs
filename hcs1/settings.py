@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'graphene_django',
     'users',
-    'house'
+    'house',
+    'provider'
 ]
 
 GRAPHENE = {
