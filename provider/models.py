@@ -13,7 +13,7 @@ class Provider(models.Model):
     apartments = models.ManyToManyField(Apartment)
 
     def __str__(self):
-        return self.name + self.provision
+        return self.name + ' ' + self.provision
 
 
 class Payment(models.Model):
@@ -24,7 +24,7 @@ class Payment(models.Model):
     provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name + self.provider.name + self.provider.provision
+        return self.name + ' ' + self.provider.name + ' ' + self.provider.provision
 
 
 class Check(models.Model):

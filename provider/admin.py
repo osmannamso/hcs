@@ -50,4 +50,4 @@ class CheckAdmin(admin.ModelAdmin):
 
 admin.site.register(Provider)
 admin.site.register(Payment, PaymentAdmin)
-admin.site.register(Check)
+admin.site.register(Check, CheckAdmin)
